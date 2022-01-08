@@ -32,7 +32,9 @@ var server = http.createServer(function (request, response) {
         '.html': 'text/html',
         '.css': 'text/css',
         '.js': 'text/javascript',
-        '.json': 'text/json'
+        '.json': 'application/json',
+        '.png': 'image/png',
+        '.jpg': 'image/jpeg'
     }
     // 设置保底值为'text/html'
     response.setHeader('Content-Type', `${fileTypes[suffix] || 'text/html'};charset=utf-8`)
